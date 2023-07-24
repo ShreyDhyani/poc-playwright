@@ -1,0 +1,17 @@
+{
+  "name": "playwright-codegen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "yarn playwright test",
+    "report": "yarn playwright show-report",
+    "codegen": "yarn playwright codegen"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.36.0"
+  }
+}
