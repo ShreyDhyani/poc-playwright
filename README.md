@@ -20,3 +20,8 @@ Following are the scripts that we can use:
 ### Codegen
 
 `yarn codegen`: This will open the playwright codegen to create automatic test and find locators for elements.
+
+
+### Cypress 
+`yarn cypress run open`: This command will open the window to run cypress in a browser. Select E2E testing.
+`yarn cypress run`: This will run the cypress tests in CLI. The results will be stored in the codebase inside cypress folder as Screenshots and Screen Recordings.
