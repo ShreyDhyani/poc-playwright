@@ -19,6 +19,12 @@ describe('template spec', () => {
     .get('.py-3').contains('Copy').click()
     .get('.rounded-5').contains('Continue').click()
     .get('.justify-between > ul.flex > :nth-child(2)').click()
-    .get('.option > .block').click()
+    cy.get('#orderForm > .mb-8').find('input').type('5000')
+    cy.get('.rounded-5').click()
+    cy.get('.flex > .text-primary').click()
+    cy.get('.rounded-5').click()
+    cy.get('.rounded-5').click()
+
+    // .get('.option > .block').click()
   })
 })
