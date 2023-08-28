@@ -12,6 +12,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.36.0"
+    "@playwright/test": "^1.36.0",
+    "mocha": "^10.2.0"
+  },
+  "dependencies": {
+    "selenium-webdriver": "^4.11.1"
   }
 }
