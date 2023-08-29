@@ -20,3 +20,7 @@ Following are the scripts that we can use:
 ### Codegen
 
 `yarn codegen`: This will open the playwright codegen to create automatic test and find locators for elements.
+
+
+### Selenium Testi:
+`yarn mocha tests/seleniumTest.spec.js`: This will open the browser to run the selenium test.
