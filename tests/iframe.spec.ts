@@ -6,7 +6,7 @@ test("Invest Flow - Success", async ({ page }) => {
   await page.getByRole("button", { name: "Continue" }).click();
   await page
     .locator("div")
-    .filter({ hasText: /^AQIPU3751YCopy$/ })
+    .filter({ hasText: /^UCRPP3751MCopy$/ })
     .getByRole("button")
     .click();
   await page.getByRole("button", { name: "Continue" }).click();

@@ -8,14 +8,16 @@ test("copy PAN input sample #1", async ({ page }) => {
   await page.getByRole("button", { name: "Continue" }).click();
   await page
     .locator("div")
-    .filter({ hasText: /^AQIPU3751YCopy$/ })
+    .filter({
+      hasText: /^UCRPP3751MCopy$/,
+    })
     .getByRole("button")
     .click();
 
   const inputValue = await page
     .getByPlaceholder("Enter PAN")
     .getAttribute("value");
-  expect(inputValue).toBe("AQIPU3751Y");
+  expect(inputValue).toBe("UCRPP3751M");
 });
 
 test("copy PAN input sample #2", async ({ page }) => {
@@ -64,6 +66,19 @@ test("No PAN input", async ({ page }) => {
   await page.getByRole("button", { name: "Continue" }).click();
   await expect
     .soft(page.getByRole("heading", { name: "Required field" }))
+    .toBeVisible();
+});
+
+test("No PAN input #2", async ({ page }) => {
+  await page.goto("https://prueba.fpappstest.io/");
+  await page.waitForURL("https://prueba.fpappstest.io/");
+
+  await page.getByRole("link", { name: "Invest", exact: true }).click();
+  await page.getByRole("button", { name: "Continue" }).click();
+  await page.getByPlaceholder("Enter PAN").fill("");
+  await page.getByRole("button", { name: "Continue" }).click();
+  await expect
+    .soft(page.getByRole("heading", { name: "This input is required" }))
     .toBeVisible();
 });
 
